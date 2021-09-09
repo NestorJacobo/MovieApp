@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alert Dialog View Controller-->
+        <scene sceneID="aSQ-U9-fsv">
+            <objects>
+                <viewController storyboardIdentifier="AlertDialogViewController" id="3Yu-MW-Dxa" customClass="AlertDialogViewController" customModule="TheMovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a4L-Em-7eO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2A-5M-9U8" customClass="CustomMDCCard" customModule="sana_medico" customModuleProvider="target">
+                                <rect key="frame" x="30" y="375" width="354" height="156"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="SWW-X9-W2W">
+                                        <rect key="frame" x="20" y="20" width="314" height="116"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3er-gA-Pm1">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="textColor" name="PrimaryColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensaje" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sL2-8d-CNB">
+                                                <rect key="frame" x="0.0" y="33.5" width="314" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ7-xm-RIl">
+                                                <rect key="frame" x="0.0" y="66" width="314" height="50"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="sr5-PG-A8h">
+                                                        <rect key="frame" x="254" y="0.0" width="60" height="50"/>
+                                                        <subviews>
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maF-2E-Its">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="50"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <state key="normal" title="Cancelar">
+                                                                    <color key="titleColor" name="PrimaryColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onClickedCancel:" destination="3Yu-MW-Dxa" eventType="touchUpInside" id="Dfx-Eu-2DZ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dn-Ln-epk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <state key="normal" title="Aceptar">
+                                                                    <color key="titleColor" name="PrimaryColor"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onConfirmClicked:" destination="3Yu-MW-Dxa" eventType="touchUpInside" id="90g-vI-5O8"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="sr5-PG-A8h" secondAttribute="trailing" id="Een-4a-RaC"/>
+                                                    <constraint firstItem="sr5-PG-A8h" firstAttribute="top" secondItem="ZQ7-xm-RIl" secondAttribute="top" id="HDH-P9-cP7"/>
+                                                    <constraint firstItem="sr5-PG-A8h" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZQ7-xm-RIl" secondAttribute="leading" id="UbU-zN-l5n"/>
+                                                    <constraint firstAttribute="bottom" secondItem="sr5-PG-A8h" secondAttribute="bottom" id="yE5-vx-yEA"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="SWW-X9-W2W" firstAttribute="leading" secondItem="f2A-5M-9U8" secondAttribute="leading" constant="20" id="ayG-ac-gWu"/>
+                                    <constraint firstAttribute="bottom" secondItem="SWW-X9-W2W" secondAttribute="bottom" constant="20" id="ceQ-we-n1e"/>
+                                    <constraint firstAttribute="trailing" secondItem="SWW-X9-W2W" secondAttribute="trailing" constant="20" id="kFJ-Wu-MEg"/>
+                                    <constraint firstItem="SWW-X9-W2W" firstAttribute="top" secondItem="f2A-5M-9U8" secondAttribute="top" constant="20" id="u2y-8u-e78"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t5I-Sx-14o"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f2A-5M-9U8" firstAttribute="centerX" secondItem="t5I-Sx-14o" secondAttribute="centerX" id="4DN-WT-ASz"/>
+                            <constraint firstItem="f2A-5M-9U8" firstAttribute="centerY" secondItem="t5I-Sx-14o" secondAttribute="centerY" id="HcW-Ux-a6c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnAccept" destination="1Dn-Ln-epk" id="tkP-BI-RWQ"/>
+                        <outlet property="btnCancel" destination="maF-2E-Its" id="Y0B-6d-i3E"/>
+                        <outlet property="lblMessage" destination="sL2-8d-CNB" id="Bkw-dJ-Asa"/>
+                        <outlet property="lblTitle" destination="3er-gA-Pm1" id="fEF-6o-dEK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ZF-2F-MI3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-355" y="50"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="PrimaryColor">
+            <color red="0.77899998426437378" green="0.046000000089406967" blue="0.23600000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
